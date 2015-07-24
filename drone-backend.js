@@ -36,27 +36,30 @@ function fly(robot) {
 
     bot.drone.disableEmergency();
     bot.drone.ftrim();
-    bot.drone.takeoff(0.3);
+    bot.drone.takeoff();
     after(8*1000, function(){
+        bot.drone.right(0.3);
+    });
+    after(10*1000,function(){
         bot.drone.front(0.3);
     });
     after(13*1000,function(){
-        bot.drone.land(0.3);
+        bot.drone.left(0.3);
     });
-    after(15*1000,function(){
-        bot.drone.takeoff(0.3);
-    });
-    after(19*1000,function(){
+    after(17*1000,function(){
         bot.drone.back(0.3);
     });
 
-    after(24*1000,function(){
-        bot.drone.land(0.3);
+    after(20*1000,function(){
+        bot.drone.right();
     });
 
-    after(28*1000,function(){
-        bot.drone.stop(0.3);
+    after(21*1000,function(){
+        bot.drone.land();
     });
+    after(24*1000,function(){
+        bot.drone.stop;
+    })
 }
 
 Cylon.start();
