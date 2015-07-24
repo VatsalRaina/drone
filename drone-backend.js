@@ -38,27 +38,27 @@ function fly(robot) {
     bot.drone.ftrim();
     bot.drone.takeoff();
 
-    after(2*1000, function(){
+    after(5*1000, function(){
         bot.drone.right(0.15);
     });
-    after(2.5*1000,function(){
+    after(5.5*1000,function(){
         bot.drone.front(0.15);
     });
-    after(3*1000,function(){
+    after(6*1000,function(){
         bot.drone.left(0.30);
     });
-    after(3.5*1000,function(){
+    after(6.5*1000,function(){
         bot.drone.back(0.15);
     });
 
-    after(4*1000,function(){
+    after(7*1000,function(){
         bot.drone.right(0.15);
     });
 
-    after(4.5*1000,function(){
+    after(7.5*1000,function(){
         bot.drone.land();
     });
-    after(5*1000,function(){
+    after(8*1000,function(){
         bot.drone.stop();
     })
 }
